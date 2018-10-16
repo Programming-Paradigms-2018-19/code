@@ -1,0 +1,511 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      body {
+        margin: 3em auto;
+        max-width: 960px;
+        background-color: white;
+        color: #221c22;
+        font: 110%/1.5em sans-serif;
+      }
+      .container {
+        padding: 0 10px;
+      }
+      .bookcover {
+        padding: 0;
+      }
+      .bookcover img {
+        border:1px solid #4b2538;
+      }
+      .booktitle {
+        font-size: 2.5em;
+        font-weight: bold;
+        line-height: 1.2em;
+      }
+      .authors {
+        font-style: italic;
+        margin-top: 0.75em;
+        margin-left: 3px;
+        font-size: 90%;
+      }
+      .publisher {
+        margin-bottom: 2.5em;
+        margin-left: 3px;
+        font-size: 90%;
+      }
+      p.summary {
+        margin: 1em 0 2em 0;
+      }
+      .sectionheading {
+        color: #4b2538;
+        margin-top: 2em;
+        font-weight: bold;
+        font-size: 1.75em;
+        margin-bottom: 1em;
+      }
+      .subsectionheading {
+        color: #937303;
+        margin-top: 1em;
+        font-weight: bold;
+        font-size: 1.25em;
+        margin-bottom: 0.75em;
+      }
+      dl {
+        background-color: #fffff2;
+        padding-left: 3px;
+      }
+      dt {
+        margin-top: 10px;
+        font-weight: bold;
+        color: #600;
+      }
+      dd {
+        font-style: italic;
+      }
+      ul li span {
+        color: #221c22;
+      }
+      a:link {
+        color: #221c62;
+      }
+      a:visited {
+        color: #9488ff;
+      }
+      a img {
+        border-style: none;
+      }
+      #bottomline {
+        border-top: 2px solid #ffa0e4;
+        margin-top: 40px;
+        padding: 20px 30px 0 30px;
+        text-align: center;
+      }
+      .errata-item, ol.exercises > li {
+        margin-top: 2.5em;
+        padding-top: 0.5em;
+        border-top: 2px solid #fcb814;
+      }
+      ol.exercises > li > ol > li {
+        list-style-type: lower-alpha;
+      }
+      pre {
+        margin-left: 40px;
+        font-family: "Lucida Console", "Courier New", monospace;
+        line-height: 1.2em;
+        letter-spacing: -0.2ex;
+      }
+      code, pre.prettyprint {
+        font-family: "Lucida Console", "Courier New", monospace;
+        font-size: 95%;
+        background-color: #e4f3ff;
+      }
+      .console {
+        white-space: pre;
+        font-family: "Lucida Console", "Courier New", monospace;
+        background-color: #002;
+        color: white;
+        padding: .75em  .75em .75em 1em;
+      }
+      .console kbd {
+        font-family: inherit;
+        color: yellow;
+        font-weight: 600;
+      }
+      @media (min-width: 640px) {
+        .bookcover {
+          float: right;
+          padding-left: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="bookcover">
+        <a href="https://www.crcpress.com/Programming-Language-Explorations/Toal-Rivera-Schneider-Choe/p/book/9781498738460" title="Did you know that the colored squares holding the names of the various languages on the cover of the book use the GitHub color for each language?"><img src="resources/book-cover.png" alt="book cover"></a>
+      </div>
+
+
+      <div class="booktitle">Programming Language Explorations</div>
+      <div class="authors">
+        <a href="http://cs.lmu.edu/~ray/">Ray Toal,</a>
+        <a href="http://www.lmu.edu/">Loyola Marymount University</a>
+        <br>
+        Rachel Rivera,
+        <a href="http://www.pandora.com/about">Pandora</a>
+        <br>
+        Alex Schneider,
+        <a href="https://www.microsoft.com/en-us/about/">Microsoft</a>
+        <br>
+        Elieen Choe,
+        <a href="https://www.blueorigin.com/">Blue Origin</a>
+      </div>
+      <div class="publisher">
+        &copy; 2017 <a href="https://www.crcpress.com/">CRC Press</a>
+      </div>
+
+      <p class="summary">This text covers various programming language
+      concepts, including binding, scope, typing, parameterization, modularity,
+      concurrency, and meta&shy;programming&mdash;not with a list of explanations
+      of each topic, but rather within the context of whole-language overviews
+      containing plenty of runnable example programs. We aim to help developers
+      learn a bit of theory, and introduce students to a number of modern
+      languages. All of the source code for the book’s examples, as
+      well as number of bonus scripts, reside in
+      <a href="https://github.com/rtoal/ple">this GitHub repository</a>.</p>
+
+
+      <div class="sectionheading">Contents</div>
+
+      <dl>
+        <dt>Chapter 0 Introduction
+        <dd>A little on why the study of languages is fun and some hints about
+        what’s coming up in the rest of the book.
+
+        <dt>Chapter 1 JavaScript
+        <dd>A tour of one of the world’s most popular languages, introducing
+        assignment, references, shallow and deep copies, null and undefined, weak
+        typing, assertions, anonymous and higher-order functions, stack frames,
+        closures, static vs. dynamic scope, shallow vs. deep binding,
+        methods, prototypes, and asynchronous programming with both
+        callbacks and promises.
+
+        <dt>Chapter 2 CoffeeScript
+        <dd>A tour of a language that compiles to JavaScript, or as is sometimes
+        said, <strong>is</strong> JavaScript&mdash;though with an alternate syntax
+        (you’ll notice a <em>lot</em> less clutter). We take a first
+        look at destructuring and existential operators, and explore a very
+        interesting design decision that avoids shadowing almost everywhere.
+
+        <dt>Chapter 3 Lua
+        <dd>A tour of the well-loved lightweight scripting language behind
+        World of Warcraft and Angry Birds (among others), introducing
+        some new types, an approach to errors that avoids exceptions,
+        and a unification of arrays and dictionaries known as the table.
+        We also see metatables, which provide both differential inheritance
+        and operator overloading, and see coroutines for the first time.
+
+        <dt>Chapter 4 Python
+        <dd>Our first language with a complex type system: types
+        are first-class objects within the language and the programmer can
+        define new types. This chapter introduces supertype-subtype
+        relationships, multiple inheritance, keyword arguments,
+        pass-by-sharing, special methods, iterators and generators,
+        and decorators.
+
+        <dt>Chapter 5 Ruby
+        <dd>Object-orientation and much more within an overview of the language
+        billed as &ldquo;A programmer’s best friend.&rdquo; We define
+        messaging, encapsulation, class-based inheritance, and polymorphism, and look
+        at access controls and singleton classes. Ruby’s blocks and
+        mixins bring up some new issues, as does the language’s extensive
+        metaprogramming capabilities.
+
+        <dt>Chapter 6 Julia
+        <dd>A tour of the new dynamic language for scientific computing where
+        we encounter abstract types, parametric types, sum and product types,
+        and the notions of covariance, contravariance, and invariance. We see
+        polymorphism with multiple dispatch (which differs from the single-receiver
+        forms of previous languages), a metaprogramming facility with
+        hygienic macros, and language support for parallel and distributed
+        computing.
+
+        <dt>Chapter 7 Java
+        <dd>An exploration of our first statically-typed language with coverage
+        of classes, modifiers, interfaces, generics, optionals (and their
+        relationship to the billion dollar mistake), reflection,
+        and quite a bit about threads and synchronization.
+
+        <dt>Chapter 8 Clojure
+        <dd>A tour of the mostly-functional, modern dialect of Lisp, that
+        inter&shy;operates with Java. We look at its interesting syntax, its rich set of
+        data types, and its implementation of namespaces; then introduce persistent
+        data structures, transients, software transactional memory, and agents.
+        We look at two approaches to the expression problem (protocols and
+        multimethods) and discuss how Clojure’s hygienic macros compare
+        to Julia’s.
+
+        <dt>Chapter 9 Elm
+        <dd>An overview of the member of the ML-family of languages that
+        makes it fun to write reactive web clients in a functional style.
+        Our tour introduces the beautiful aspects of the ML-family&mdash;Hindley-Milner
+        typing with type variables and extensive type inference, pattern-matching,
+        and tagged union types&mdash;as well as Elm’s contributions, including
+        record types and subscriptions. This chapter (together with
+        the overviews of Haskell and Idris in Chapter 14) discusses the general problem
+        of managing side-effects in pure functional programming.
+
+        <dt>Chapter 10 Erlang
+        <dd>The language known for scalability and incredible seven-nines
+        availablity that powers the messaging infrastructure behind Whisper and
+        WhatsApp. As Erlang is a functional language like Clojure and Elm (though
+        with a rather unique syntax), this chapter continues our discussion on
+        loop-free, matching-oriented programming with immutable data. We focus
+        on makes Erlang Erlang: its messaging system based on processes
+        without shared memory, and its acheivement of high availability
+        through a philosophy known as &ldquo;Let it Crash.&rdquo;
+
+        <dt>Chapter 11 Go
+        <dd>Another language emphasizing distributed programming via message
+        passing, but unlike Erlang, places the focus on channels rather than
+        on named processes. Our tour introduces a few other concepts,
+        such as multiple-value function returns, defer statements, explicit pointers,
+        slices, and panics. We examine Go’s level of type inference, which
+        falls somewhere in between Java’s and Elm’s.
+
+        <dt>Chapter 12 Swift
+        <dd>A look at the elegantly-designed, safe, fun, and powerful
+        modern language most often used for writing native applications in macOS,
+        iOS, tvOS, and watchOS. Here we see character processing done right,
+        common collections implemented as library types rather than hardwired
+        into the language (though with syntactic sugar to trick you), more on
+        optionals, custom operator definitions, extensions, and protocols.
+        We also spend time on the details of automatic reference counting (ARC).
+
+        <dt>Chapter 13 Additional Languages
+        <dd>Brief looks at Fortran, COBOL, Lisp, Algol, Simula, Smalltalk, C,
+        C++, Rust, CLU, Ada, C#, Scala, Bash, Perl, Standard ML, OCaml, Haskell,
+        F#, Idris, ParaSail, Chapel, Elixir, PHP, Hack, TypeScript, Dart, APL,
+        Prolog, K, Io, Factor, Brainfuck, Befunge, LOLCODE, and nasm (an assembly
+        language for the x86 architecture). This chapter is by no means an
+        afterthought or an aside; the sections on Rust and C, in particular,
+        discuss how one deals with explicit pointers without
+        a garbage collector, while other sections introduce new programming
+        paradigms not covered in the twelve featured language chapters.
+
+        <dt>Chapter 14 Afterword
+        <dd>A review of language concepts in a Socratic fashion.
+
+        <dt>Appendix A Numbers
+        <dd>Encodings of fixed-size integers and IEEE-754 floating point numbers.
+
+        <dt>Appendix B Text
+        <dd>All you need to know about Unicode (including what extended
+        grapheme clusters are, and how exactly UTF-8 works), and a
+        little bit more.
+      </dl>
+
+
+      <div class="sectionheading">Good to Know</div>
+
+      <p>Some prerequisites: This book is not for beginning programmers. We
+      assume you know at least two languages pretty well, and hopefully a couple
+      more. You should know the basic concepts surrounding variables, expressions,
+      operators, functions, and basic data structures, and have experience
+      writing nontrivial applications&mdash;this book is a <em>tour</em>, not a
+      <em>tutorial</em>. We cover many interesting (and often powerful) features,
+      and <strong>purposely do so with code that is often very dense and sometimes
+      cryptic, even when presenting unfamiliar paradigms for the first
+      time</strong>. If you like to learn by reading example code, and
+      performing your own experiments, you should
+      find the approach to your liking.</p>
+
+      <p>Most of the code examples are written as their own unit tests,
+      which should help you learn the concepts as you read the code itself.
+      We favor this style over excessive commenting.
+      <a href="http://www.kyleblaney.com/software-blog/2012/6/29/comments-are-a-failure.html">Uncle
+      Bob tells us why comments are not &ldquo;pure good.&rdquo;</a></p>
+
+      <p>Please note the book is <em>not</em> a treatise based on formal
+      syntax and semantics. For deeper theory, see, for example,
+      <a href="http://www.cambridge.org/us/academic/subjects/computer-science/programming-languages-and-applied-logic/practical-foundations-programming-languages-2nd-edition">Harper</a>,
+      <a href="https://mitpress.mit.edu/books/types-and-programming-languages">Pierce</a>, or
+      <a href="https://mitpress.mit.edu/books/design-concepts-programming-languages">Turbak and Gifford</a>.
+      Looking for more on history? Start with Wikipedia’s articles on programming language
+      history and follow links. Make sure to go way back and read some early papers;
+      the classics by
+      <a href="http://www.mirrorservice.org/sites/www.bitsavers.org/pdf/stanford/cs_techReports/STAN-CS-76-562_EarlyDevelPgmgLang_Aug76.pdf">Knuth</a>
+      and <a href="http://worrydream.com/EarlyHistoryOfSmalltalk/">Kay</a> are must
+      reads for anyone that appreciates and values where the field has come from.
+      Finally, for an approach to language practice and theory
+      orgranized around programming style and paradigms, don't miss
+      <a href="https://www.crcpress.com/Exercises-in-Programming-Style/Lopes/p/book/9781482227376">Lopes</a>.
+
+
+      <div class="sectionheading">Additional Resources</div>
+
+      <p>We’ve put all of our examples, and unit tests galore, on
+      <a href="https://github.com/rtoal/ple">GitHub</a>, of course.
+      The repo contains pointers to additional resources (books, papers,
+      applications, frameworks, etc.) for each of the
+      programming languages covered in their respective README.md files.
+      See something wrong or want to add anything? Send us a pull request.</p>
+
+      <p>There are, however, many resources not tied to any particular
+      language that you may enjoy. Here are just a few:</p>
+
+      <ul>
+        <li><a href="https://learnxinyminutes.com/">Learn X in Y Minutes</a>
+        <li><a href="http://rigaux.org/language-study/syntax-across-languages.html">Syntax Across Languages</a>
+        <li><a href="https://en.wikipedia.org/wiki/Comparison_of_programming_languages">Wikipedia Programming Language Comparisons</a>
+        <li><a href="http://hyperpolyglot.org/">Hyperpolyglot</a>
+      </ul>
+
+      <p>In addition, you might want to visit a few languages not covered in the book.
+      Here are some of our favorites:</p>
+
+      <p style="text-align:center">
+        <a href="https://github.com/damelang/nile">Nile</a> &bull;
+        <a href="https://scratch.mit.edu/">Scratch</a> &bull;
+        <a href="http://snap.berkeley.edu/">Snap!</a> &bull;
+        <a href="https://gpblocks.org/">GP</a> &bull;
+        <a href="https://ioke.org/">Ioke</a> &bull;
+        <a href="http://www.jsoftware.com/">J</a> &bull;
+        <a href="http://www.selflanguage.org/">Self</a> &bull;
+        <a href="https://racket-lang.org/">Racket</a> &bull;
+        <a href="https://dlang.org/">D</a> &bull;
+        <a href="https://crystal-lang.org/">Crystal</a> &bull;
+        <a href="http://ceylon-lang.org/">Ceylon</a> &bull;
+        <a href="https://kotlinlang.org/">Kotlin</a> &bull;
+        <a href="https://boo-language.github.io/">Boo</a> &bull;
+        <a href="http://www.zimbu.org/">Zimbu</a> &bull;
+        <a href="http://fantom.org/">Fantom</a> &bull;
+        <a href="http://opalang.org/">Opa</a> &bull;
+        <a href="https://wiki.gnome.org/Projects/Vala">Vala</a> &bull;
+        <a href="http://docs.yoyogames.com/source/dadiospice/002_reference/001_gml%20language%20overview/">GML</a> &bull;
+        <a href="http://www.purescript.org/">PureScript</a> &bull;
+        <a href="http://nim-lang.org/">Nim</a> &bull;
+        <a href="http://nemerle.org/About">Nemerle</a> &bull;
+        <a href="http://kittenlang.org/">Kitten</a> &bull;
+        <a href="https://mercurylang.org/">Mercury</a> &bull;
+        <a href="http://io.livecode.ch/learn/readevalprintlove/black">Black</a> &bull;
+        <a href="http://ciao-lang.org/">Ciao</a> &bull;
+        <a href="http://roy.brianmckenna.org/">Roy</a> &bull;
+        <a href="http://www.impredicative.com/ur/">Ur</a> &bull;
+        <a href="http://www.mathstat.dal.ca/~selinger/quipper/">Quipper</a> &bull;
+        <a href="https://agraef.github.io/pure-lang/">Pure</a> &bull;
+        <a href="https://quorumlanguage.com/">Quorum<a> &bull;
+        <a href="http://www.falconpl.org/">Falcon</a>
+        <a href="https://www.typescriptlang.org/">TypeScript</a>
+        <a href="https://ziglang.org/">Zig</a>
+      </ul>
+
+      <p>Just for fun, we’ve gotten started on <a href="overviews.html">a
+      little &ldquo;browser&rdquo; of language highlights</a> for each of the
+      languages from the book and many others as well.</p>
+
+      <div class="sectionheading">Updates</div>
+
+      <p>The languages covered in the book are evolving! Sometimes this means the text in the book goes out of date. We’ll do our best to keep with breaking changes and provide text changes and replacement pages here. Here’s what we know so far:</p>
+
+      <div class="subsectionheading">Changes to Ruby</div>
+      <p>Ruby 2.4 arrived after the book was first printed, and came with one welcome language change: the old <code>Fixnum</code> and <code>Bignum</code> classes are now unified into a single <code>Integer</code> class. Fortunately the only page in the book dependent on this difference was page 80. Please <a href="resources/book-replacement-pages/rubytypes.pdf">download the updated page</a>.
+
+
+      <div class="subsectionheading">Changes to Swift</div>
+      <p>The first printing took place when Swift 3 was in beta. The release version of Swift 3 included significant language changes, requiring several scripts and a couple pages to be rewritten.</p>
+      <ul>
+      <li><b>Page 2, third script</b>, and <b>Page 258</b>. Remove <code>combine:</code> in <code>reduce</code> call.
+      <li><b>Page 244, second script</b>. Replace <code>Process</code> with <code>CommandLine</code>.
+      <li><b>Page 248, third script and Page 259, third script</b>. Replace all uses of <code>M_PI</code> with <code>Double.pi</code>.
+      <li><b>Page 253, second script</b>. Replace <code>ErrorProtocol</code> with <code>Error</code>, and make the same replacement in the text of line 3 of the following page.
+      <li><b>Page 255</b>. The argument to <code>String()</code> must now be prefixed with <code>describing:</code>.
+      <li><b>Page 254-256</b>. The mechanisms for operator precedence have been drastically changed. <a href="resources/book-replacement-pages/swift3updates.pdf">Download replacement pages for the book</a>.
+      </ul>
+
+      <div class="subsectionheading">Changes to the xregexp library used in JavaScript and CoffeeScript</div>
+      <p>Recent versions of the xregexp library now export the <code>XRegExp</code> function as the module default, therefore:</p>
+      <ul>
+      <li><b>Page 25, second script</b>. Remove <code>.XRegExp</code> near the end of the second line.
+      <li><b>Page 33, first script</b>. Remove the braces around <code>XRegExp</code> in the second line.
+      <li><b>Page 44</b>. Remove Exercise 2.19, which no longer applies, thanks to this library change.
+      </ul>
+
+      <div class="subsectionheading">Changes to Elm</div>
+      <p>The first printing of the book took place when Elm was at version 0.17. Recent language changes have been quite significant; for example, backticks to make functions infix are gone, apostrophes are no longer allowed in identifiers, the argument order for <code>andThen</code> has changed, and range expressions such as <code>[1..10]</code> have been removed from the language. More significantly, the <code>elm-test</code> package has completely changed. We have decided to remove <code>elm-test</code> assertions (and the dependency on this package) from our sample code and replace them with our own trivial assertions module.Because of these changes, <em>the entire chapter has had to be rewritten</em>. <a href="resources/book-replacement-pages/new-elm-chapter.pdf">Download replacement pages for the book</a>.
+
+      <div class="subsectionheading">Changes to Julia</div>
+      <p>The first printing of the book took place when Julia was at version 0.4.0. Recent language changes have been quite significant.</p>
+      <ul>
+      <li><b>Pages 103-109</b>. There have been changes to the type hierarachy. The types <code>ASCIIString</code> and <code>UTF8String</code> have been removed. Array slicing of rows now produces vectors. The supertype of <code>Set{T}</code> has changed. The function <code>super</code> is now <code>supertype</code>. Functions now have special types. <a href="resources/book-replacement-pages/julia-type-updates.pdf">Download replacement pages for the book</a>.
+      <li><b>Page 114</b>. RemoteRefs are now called Futures, and factoring is now part of a package, so we had to rewrite the scripts on the page. <a href="resources/book-replacement-pages/julia-remote-updates.pdf">Download the replacement page</a>.
+      </ul>
+
+      <div class="sectionheading">Errata</div>
+
+      <p>Here are the outright mistakes in the printed text we know about that are not due to language evolution. Please let us know if <em>you</em> find anything. Email one of the authors or submit a pull request for this file.</p>
+
+      <ul>
+        <li><b>Page 27, fourth bullet in the Wrap Up section</b>. Replace the words “and the empty object” with “and the value <code>false</code> itself.” Thanks to Damjan Vujnovic for discovering this error. (The empty object is definitely truthy in JavaScript!)
+        <li><b>Page 102, near the bottom</b>. The Python interactive session was completely wrong. The use of the existing variable in the list comprehension (or equivalently, the “leakage” of the comprehension index variable) was a feature of Python 2 and no longer appears in modern Python (3+). We have replaced this example to highlight CoffeeScript instead, which does leak the comprehension index. <a href="resources/book-replacement-pages/list-comprehension-fix.pdf">Download the replacement page</a>. Thanks to Edgar R. Chavez for discovering the problem.
+        <li><b>Page 221, line 2 of text</b>. Insert <tt>and</tt> between <tt>creating</tt> and <tt>modifying</tt>.
+        <li><b>Page 221, line 5 of text</b>. Remove the word <tt>more</tt>.
+      </ul>
+
+
+      <div class="sectionheading">Additional Exercises</div>
+
+      <p>The text features 300 exercises, most of which are &ldquo;further
+      explorations&rdquo; in which you find or install compilers or interpreters,
+      investigate aspects of a language not covered in the chapter proper,
+      muse about language designers’ intents, and try your hand at
+      both large and small programming tasks. For those wishing more practice
+      or are looking to explore many programming langauge topics not covered in
+      the text, we’ve provided <a href="more-exercises.html">a page
+      with a few more</a>.</p>
+
+
+      <div id="bottomline">
+        <img src="resources/ada-logo-24.png" title="Ada">
+        <img src="resources/apl-logo-24.png" title="APL">
+        <img src="resources/awk-logo-24.png" title="AWK">
+        <img src="resources/bash-logo-24.png" title="Bash">
+        <img src="resources/boo-logo-24.png" title="Boo">
+        <img src="resources/c-logo-24.png" title="C">
+        <img src="resources/ceylon-logo-24.png" title="Ceylon">
+        <img src="resources/chapel-logo-24.png" title="Chapel">
+        <img src="resources/clojure-logo-24.png" title="Clojure">
+        <img src="resources/coffeescript-logo-24.png" title="CoffeeScript">
+        <img src="resources/commonlisp-logo-24.png" title="CommonLisp">
+        <img src="resources/cpp-logo-24.png" title="C++">
+        <img src="resources/csharp-logo-24.png" title="C#">
+        <img src="resources/d-logo-24.png" title="D">
+        <img src="resources/dart-logo-24.png" title="Dart">
+        <img src="resources/elixir-logo-24.png" title="Elixir">
+        <img src="resources/elm-logo-24.png" title="Elm">
+        <img src="resources/erlang-logo-24.png" title="Erlang">
+        <img src="resources/factor-logo-24.png" title="Factor">
+        <img src="resources/falcon-logo-24.png" title="Falcon">
+        <img src="resources/fsharp-logo-24.png" title="F#">
+        <img src="resources/go-logo-24.png" title="Go">
+        <img src="resources/gp-logo-24.png" title="GP">
+        <img src="resources/haskell-logo-24.png" title="Haskell">
+        <img src="resources/idris-logo-24.png" title="Idris">
+        <img src="resources/io-logo-24.png" title="Io">
+        <img src="resources/java-logo-24.png" title="Java">
+        <img src="resources/javascript-logo-24.png" title="JavaScript">
+        <img src="resources/julia-logo-24.png" title="Julia">
+        <img src="resources/k-logo-24.png" title="K">
+        <img src="resources/kitten-logo-24.png" title="Kitten">
+        <img src="resources/kotlin-logo-24.png" title="Kotlin">
+        <img src="resources/lolcode-logo-24.png" title="LOLCODE">
+        <img src="resources/lua-logo-24.png" title="Lua">
+        <img src="resources/matlab-logo-24.png" title="MATLAB">
+        <img src="resources/mercury-logo-24.png" title="Mercury">
+        <img src="resources/nasm-logo-24.png" title="NASM">
+        <img src="resources/nemerle-logo-24.png" title="nemerle">
+        <img src="resources/nim-logo-24.png" title="Nim">
+        <img src="resources/ocaml-logo-24.png" title="OCaml">
+        <img src="resources/perl-logo-24.png" title="Perl">
+        <img src="resources/purescript-logo-24.png" title="PureScript">
+        <img src="resources/python-logo-24.png" title="Python">
+        <img src="resources/r-logo-24.png" title="R">
+        <img src="resources/racket-logo-24.png" title="Racket">
+        <img src="resources/roy-logo-24.png" title="Roy">
+        <img src="resources/ruby-logo-24.png" title="Ruby">
+        <img src="resources/rust-logo-24.png" title="Rust">
+        <img src="resources/scala-logo-24.png" title="Scala">
+        <img src="resources/scratch-logo-24.png" title="Scratch">
+        <img src="resources/smalltalk-logo-24.png" title="Smalltalk">
+        <img src="resources/snap-logo-24.png" title="Snap!">
+        <img src="resources/sml-logo-24.png" title="Standard ML">
+        <img src="resources/swift-logo-24.png" title="Swift">
+        <img src="resources/tcl-logo-24.png" title="Tcl">
+        <img src="resources/whiley-logo-24.png" title="Whiley">
+      </div>
+    </div>
+  </body>
+</html>
