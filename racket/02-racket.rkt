@@ -1,3 +1,5 @@
+#lang racket
+
 ;; Higher-Order Functions
 
 ;; examples to try:
@@ -40,7 +42,12 @@
 (define (deep-reverse list)
   (cond ((null? list) empty)
         ((not (pair? list)) list)
-        (else (append (deep-reverse (cdr list)) (cons (deep-reverse (car list)) empty)))))
+        (else (append (deep-reverse (cdr list)) (cons (deep-reverse (car list) empty))))))
+
+(define (deep-reverse-2 lst)
+  (cond ((null? lst) empty)
+        ((not (pair? lst)) lst)
+        (else (append (deep-reverse-2 (cdr lst)) (list (deep-reverse-2 (car lst)))))))
 
 (define (accumulate op initial sequence)
   (if (null? sequence)
