@@ -8,5 +8,5 @@ brother(Y,Z) :- father(X,Y),father(X,Z), not(Y = Z).
 
 grandson(X,Y) :- father(Y,Z), father(Z,X).
 
-descendent(X,Y) :- father(Y,X). % (1)
-descendent(X,Y) :- father(Z,X), descendent(Z,Y). % (2)
+descendent(X,Y) :- father(Y,X).
+descendent(X,Y) :- father(Z,X), descendent(Z,Y).

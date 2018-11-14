@@ -1,0 +1,5 @@
+% Babe is a pig.
+pig(babe).
+% pigs like mud.
+likes(pig,mud).
+
