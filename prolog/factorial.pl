@@ -1,4 +1,4 @@
-factorial(1, 1).
+factorial(1, 1) :- !.
 factorial(N, Result) :-
 	Y is N - 1,
 	factorial(Y, Something),

@@ -17,7 +17,3 @@ To run the tests:
 # Erlang Resources
 
 * [Awesome Erlang](https://github.com/drobakowski/awesome-erlang)
-
-# Kent Master Classes
-
-Are available under the `Master-Classes-Kent` directory.
